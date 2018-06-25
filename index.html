@@ -4,96 +4,459 @@
     <meta charset="UTF-8">
     <p>paginaweb</p>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- //adapte a cuaqluier patallla -->
-    <link rol="stylesheet" href="css/stly.css">
+    <link rel="stylesheet" href="css/stly.css" type="text/css">
   </head>
   <body>
-    <header class="header">
-      <h1 class="portada" >My page web1</h1>
-      <style scr="../css/stly.css">
-
-      </style>
-      <style>
-        body {background-color: powderblue;}
-        h1   {color: blue;}
-        p    {color: red;}
-      </style>
-      <div class="contenedor">
-        <h1 class="logo">asisalome</h1>
-        <!-- <div class="banner">
-          <img src="img/portada.gif" class="background">
-          <img src="img/perfil.jpg" class="avatar">
+    <div id="contenedor">
+      <header>
+        <div class="modalboton">
+          <button  id="buttonone">
+          Open Animated Modal</button>
         </div>
-        <h2>ME gustan saber el movimiento <br/> y leyes que rigen el uneverso</h2> -->
-        <span class="icon-menu"></span>
-        <nav class="nav">
-          <ul class="menu">
-            <li class="menu__item"><a class="menu_link" href="">curso</a></li>
-            <li class="menu__item"><a class="menu_link" href="">inicio</a></li>
-            <li class="menu__item"><a class="menu_link" href="">Sobre mi</a></li>
-            <li class="menu__item"><a class="menu_link" href="">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
 
-      <h2>Modal Example</h2>
-      <button id="myBtn">Open Modal</button>
-      <button >Open Modal</button>
+      </header>
+
+      <nav id="nav">
+       <button onclick="myFunction()" class=" nav2">
+            <img  src="img/div.gif"  style= "width:78px;
+            height:77;">
+       </button>
+        <!-- <div class="banner">
+            <img  src="img/tumblr_inline_oah2fwHPQM1upmakb_500.gif"
+            style= "width:1200px;
+            height:100px;"
+             >
+        </div> -->
+          <div id="myDIV">
+            <p>Hello</p>
+          </div>
+
+          <div class="dropdown">
+            <button onclick="searchs()" class="search"><span>Buscar¡¡¡mas</span></button>
+              <div id="myDropdown" class="dropdown-content">
+                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                <a href="#about">About</a>
+                <a href="#base">Base</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+                <a href="#custom">Custom</a>
+                <a href="#support">Support</a>
+                <a href="#tools">Tools</a>
+              </div>
+            </div>
+        </nav>
+      <section id="contenido">
+
+          <div id="contenedorprincipal">
+            <div class="selecciona-container" id="myBtnContainer">
+              <div><button class="btn1" onclick="filterSelection('curso')">
+                ¿Que estudia<br/>:O?</button>
+              </div>
+                <div><button class="btn1" onclick="filterSelection('inicio')">
+                   Algo de historia<br/>/biografia</button>
+                </div>
+                <div><button class="btn1" onclick="filterSelection('sobremi')">
+                  ¿Cómo se aplica en la<br/> vida real?</button>
+                </div>
+              <div><button class="btn1" onclick="filterSelection('contacto')">
+                ¿¡puedo hacer<br/> mismo¡?</button>
+              </div>
+            </div>
+              <h1>imagen</h1>
+              <img src="img/hertzsprung-russell_diagram-stars.jpg"
+              usemap="#diagramahr"
+              alt="diagramahr"
+              style= "width:555px;
+              height:600px;"
+              class="temaimg">
+              <map name="diagramahr">
+                <area shape="rect" coords="34,44,45,350" alt="firts" href="http://www.blogodisea.com/diagrama-h-r-hertzsprung-russell.html">
+                <area shape="rect" coords="200,201,250" alt="3rogreenlefth" href="http://www.blogodisea.com/diagrama-h-r-hertzsprung-russell.html">
+                <area shape="circle" coords="337,300,44" alt="second" href="https://www.youtube.com/watch?v=ECi8LwHwhpg">
+              </map>
+          </div>
+
+            <div id="seccion">
+              <div id="myBtnContainer">
+                <button class="btn activeone" onclick="filterSelection('all')"> Show all</button>
+              </div>
+                <div class="filterDiv curso">
+                     <p class="info">
+                            A  paragraph with a floating image.<br>
+                             A paragraph with a floating image.<br>
+                             A paragraph with a floating image.<br>
+                             A  paragraph with a floating image.<br>
+                              A paragraph with a floating image.<br>
+                              A paragraph with a floating image.<br>
+                              <li class="menu__item">
+                                 <a class="menu_link" href="">inicio</a>
+                               </li>
+                     </p>
+                  <img src="img/SN1987A.gif" class="circle10">
+            </div>
+            <div class="filterDiv inicio">
+                    <p class="info">
+                           A  paragraph with a floating image.<br>
+                            A paragraph with a floating image.<br>
+                            A paragraph with a floating image.<br>
+                            A  paragraph with a floating image.<br>
+                             A paragraph with a floating image.<br>
+                             A paragraph with a floating image.<br>
+                             <li class="menu__item">
+                                <a class="menu_link" href="">inicio</a>
+                              </li>
+                    </p>
+                 <img src="img/SN1987A.gif" class="circle1">
+                </div>
+                <div class="filterDiv sobremi">
+                  <p class="info">
+                         A  paragraph with a floating image.<br>
+                          A paragraph with a floating image.<br>
+                          A paragraph with a floating image.<br>
+                          A  paragraph with a floating image.<br>
+                           A paragraph with a floating image.<br>
+                           A paragraph with a floating image.<br>
+                           <li class="menu__item">
+                              <a class="menu_link" href="">inigggcio</a>
+                            </li>
+                  </p>
+                  <img src="img/SN1987A.gif" class="circle1">
+                </div>
+                <div class="filterDiv contacto">
+                  <p class="info">
+                         A  paragraph with a floating image.<br>
+                          A paragraph with a floating image.<br>
+                          A paragraph with a floating image.<br>
+                          A  paragraph with a floating image.<br>
+                           A paragraph with a floating image.<br>
+                           A paragraph with a floating image.<br>
+                           <li class="menu__item">
+                              <a class="menu_link" href="">inicio</a>
+                            </li>
+
+                  </p>
+                  <img src="img/SN1987A.gif" class="circle10">
+
+                </div>
+
+            </div>
+                                        <!-- parrafos informacion -->
+
+                                          <!-- FIN DEL contenedor -->
+                                          <div class=" basemodal">
+                                            <button id="myBtn" >Open Modal</button>
+                                         </div>
+      </section>
+                                              <!-- FIN DEL CONTENIDO -->
+
+
+
+
+
+
+      <!-- <button id="myBtn">Open Modal</button> -->
+      <!-- <button type="button"
+      onclick="document.getElementById('myBtn').innerHTML = bottons()">
+          Click me to display Date and Time.
+      </button> -->
+
 
       <!-- Trigger/Open The Modal -->
       <!-- <span class="icon-menu" id="btn-menu">
       </span> -->
         <!-- Modal content -->
       <!-- <nav class="nav" id="nav"> -->
-        <div class="modal-content" id="myModal">
-          <div class="modal-header">
-            <span class="close">&times;</span>
+
+    </div>
+    <!-- <div class="modal-content" id="myModal">
+      <div class="modal-header">
+        <span class="close">&times;</span> -->
+
+    <!-- </div> -->
+
+
+      <!-- <div id="firts" class="1-modal">
+        <div class="1-modal-content 1-animate-top 1-card-4">
+          <header class="1-container 1-teal">
+            <span onclick="document.getElementById('firts').style.display='none'"
+            class="1-button 1-display-topright">&times;</span>
             <h2>Modal Header</h2>
-          </div>
-          <div class="modal-body">
-            <p>Some text in the Modal Body</p>
-            <p>Some other text...</p>
-          </div>
-          <div class="modal-footer">
-            <h3>Modal Footer</h3>
-          </div>
-         </div>
-         <script scr="js/menu.js"></script>
+          </header> -->
+                          <!-- repeat -->
 
-    </header>
-    <h2>Use JavaScript to Change Text</h2>
-<p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
+          <!-- </div> --> -->
+          <div class="one-modal">
+            <div class="row">
+              <div class="column">
+                <img src="img/wedding.jpg" style="width:100%">
+                <img src="img/rocks.jpg" style="width:100%">
+                <img src="img/falls2.jpg" style="width:100%">
+                <img src="img/paris.jpg" style="width:100%">
+                <img src="img/nature.jpg" style="width:100%">
+                <img src="img/mist.jpg" style="width:100%">
+                <img src="img/paris.jpg" style="width:100%">
+              </div>
+            </div>
+          </div>
 
-<p id="demo"></p>
+          <div class="one-modal" id="modalone">
+
+
+            <!-- <div id="modal01" class="nav2" onclick="this.style.display='none'">
+              <img src="img/div.gif" id="img01" style="width:100%"></div> -->
+            <div class="one-header">
+              <h1>MY ID</h1>
+              <span class="cerrar">&times;</span>
+              <div class="card">
+                <img src="img/perfil.jpg" class="registro">
+                <div class="containerone">
+                  <p>escribe tu nombre o apodo</p>
+                  <p>selecciona tu contraseña</p>
+                  <p>¿como te sientes?</p>
+                  <p>¿how do you feeling?</p>
+                </div>
+              </div>
+             <!-- </div>
+           </div> -->
+          </div>
+
+          <!-- <footer class="1-container 1-teal">
+            <p>Modal Footer</p>
+          </footer> -->
+        </div>
+
+                                   <!-- //ultimo -->
+
+    <div class="modal-content" id="myModal">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Modal Header</h2>
+        <div id="myContainerMusica">
+          <button class="boton activa" onclick="carpetaMedia('we')"> Show all</button>
+          <button class="boton boton1" onclick="carpetaMedia('cars')"> Cars</button>
+          <button class="boton boton2" onclick="carpetaMedia('animals')"> Animals</button>
+          <button class="boton boton3" onclick="carpetaMedia('fruits')"> Fruits</button>
+          <button class="boton boton4" onclick="carpetaMedia('colors')"> Colors</button>
+          </div>
+
+         <div class="contienemp3">
+          <div class="carpetaMobie cars">
+            <audio controls>
+              <source src="horse.ogg" type="audio/ogg">
+
+              <source src="Phil Collins - In The Air Tonight.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          <div class="carpetaMobie colors fruits">
+            <audio controls>
+              <source src="Phil Collins - In The Air Tonight.mp3" type="audio/mpeg">
+            </audio>
+            Orange
+          </div>
+          <div class="carpetaMobie cars">Volvo</div>
+          <div class="carpetaMobie colors">Red</div>
+          <div class="carpetaMobie cars animals">Mustang</div>
+          <div class="carpetaMobie colors">Blue</div>
+          <div class="carpetaMobie animals">Cat</div>
+          <div class="carpetaMobie animals">Dog</div>
+          <div class="carpetaMobie fruits">Melon</div>
+          <div class="carpetaMobie fruits animals">Kiwi</div>
+          <div class="carpetaMobie fruits">Banana</div>
+          <div class="carpetaMobie fruits">Lemon</div>
+          <div class="carpetaMobie animals">Cow</div>
+        </div>
+      </div>
+     </div>
+
+     <script>
+     /* When the user clicks on the button,
+     toggle between hiding and showing the dropdown content */
+     function searchs() {
+         document.getElementById("myDropdown").classList.toggle("show");
+     }
+
+     function filterFunction() {
+         var input, filter, ul, li, a, i;
+         input = document.getElementById("myInput");
+         filter = input.value.toUpperCase();
+         div = document.getElementById("myDropdown");
+         a = div.getElementsByTagName("a");
+         for (i = 0; i < a.length; i++) {
+             if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                 a[i].style.display = "";
+             } else {
+                 a[i].style.display = "none";
+             }
+         }
+     }
+     </script>
+     <script>
+        filterSelection("all")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("filterDiv");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+
+        // function w3AddClass(element, name) {
+        //   var i, arr1, arr2;
+        //   arr1 = element.className.split(" ");
+        //   arr2 = name.split(" ");
+        //   for (i = 0; i < arr2.length; i++) {
+        //     if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        //   }
+        // }
+        //
+        // function w3RemoveClass(element, name) {
+        //   var i, arr1, arr2;
+        //   arr1 = element.className.split(" ");
+        //   arr2 = name.split(" ");
+        //   for (i = 0; i < arr2.length; i++) {
+        //     while (arr1.indexOf(arr2[i]) > -1) {
+        //       arr1.splice(arr1.indexOf(arr2[i]), 1);
+        //     }
+        //   }
+        //   element.className = arr1.join(" ");
+        // }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+    </script>
+
 <script>
-document.getElementById("demo").innerHTML = "Hello JavaScript!";
-
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal
-btn.click = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.innerHTML === "Hello") {
+        x.innerHTML = "SOMOS +2!";
+    } else {
+        x.innerHTML = "Hello";
     }
 }
 </script>
+    <script>
 
+    // var bottons = function(){
+      var modal = document.getElementById('myModal');
+
+      // Get the button that opens the modal
+
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function() {
+          modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+
+    </script>
+    <script>
+     carpetaMedia("we")
+     function carpetaMedia(c) {
+       var x, i;
+       x = document.getElementsByClassName("carpetaMobie");
+       if (c == "we") c = "";
+       for (i = 0; i < x.length; i++) {
+         w3RemoveClass(x[i], "mostrar");
+         if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "mostrar");
+       }
+     }
+
+     function w3AddClass(element, name) {
+       var i, arr1, arr2;
+       arr1 = element.className.split(" ");
+       arr2 = name.split(" ");
+       for (i = 0; i < arr2.length; i++) {
+         if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+       }
+     }
+
+     function w3RemoveClass(element, name) {
+       var i, arr1, arr2;
+       arr1 = element.className.split(" ");
+       arr2 = name.split(" ");
+       for (i = 0; i < arr2.length; i++) {
+         while (arr1.indexOf(arr2[i]) > -1) {
+           arr1.splice(arr1.indexOf(arr2[i]), 1);
+         }
+       }
+       element.className = arr1.join(" ");
+     }
+
+     // Add active class to the current button (higcarpeta it)
+     var btnContainer = document.getElementById("myContainerMusica");
+     var btns = btnContainer.getElementsByClassName("boton");
+     for (var i = 0; i < btns.length; i++) {
+       btns[i].addEventListener("click", function(){
+         var current = document.getElementsByClassName("activa");
+         current[0].className = current[0].className.replace(" active", "");
+         this.className += " activa";
+       });
+     }
+  </script>
+  <script>
+
+
+
+  // var bottons = function(){
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("buttonone");
+
+    var one = document.getElementById("modalone");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("cerrar")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        one.style.display = "block";
+
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        one.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == one) {
+            one.style.display = "none";
+        }
+    }
+
+  </script>
+  <!-- <script>
+  function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  }
+</script> -->
   </body>
 </html>

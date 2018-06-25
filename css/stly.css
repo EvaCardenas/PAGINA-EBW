@@ -1,54 +1,258 @@
 /*
-  .banner {
-  position: relative;
-  .background {
-    opacity: 0.5;
-    width: 100%;
-  }
-  .avatar {
-    position: absolute;
-    top: 75%;
-    left: 35%;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    border: 2px solid #FFFFFF;
-  }
+
+   */
+
+
+*{
+  margin:0px;
+  padding: 0px;
+}
+body{
+  background:black;
+   color: blue;
+   color: black;
+}
+#contenedor{
+  width: 1200px;
+  height: 1000px;
+  background: green;
+  margin: 0.5em auto;
+}
+/* .banner {
+.background {
+  opacity: 0.5px}
 } */
-  /* .headline {
-    margin-top: 50px;
-  } */
-  .nav{
+
+#myDIV{
+  text-align: center;
+   font-size: 35px;
+   font-size-adjust: 0.58;
+}
+
+.nav2{
+height: 50%;
+position: absolute;
+end:23%;
+bottom:45%;
+left: 2%;
+
+}
+
+#nav{
+  height: 10%;
+  background: orange;
+  border-radius: 1em;
+  margin: 1em;
+  position: relative;
+}
+.search {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width:110%;
+    left: 5%;
+}
+.search span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.search span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.search:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+.search:hover span {
+  padding-right: 25px;
+}
+
+.search:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#myInput {
+    border-box: box-sizing;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
     position: absolute;
-    top:80px;
-    left: 0;
-    width: 100%;
-
-  }
-.header{
-  height: 60px;
+    /* width: 1000px;
+    height: 1000px; */
+    display: inline-block;
+    bottom:30%;
+    left: 10%;
 }
-.header.contenedor{
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+#contenido{
+  height: 80%;
+  background: blue;
+  margin: 1em;
+}
+#contenedorprincipal{
+    height: 95%;
+    width: 53%;
+    background: pink;
+    float: left;
+}
+ .selecciona-container{
   display: flex;
+  background-color: DodgerBlue;
 }
-.menu__link {
-  display: block;
-  padding: 20px;
-  background: yellow ;
+
+.selecciona-container> div {
+  background-color: #f1f1f1;
+  width: 100px;
+  height: 40px;
+  margin: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+.temaimg{
+  position: absolute;
+  right: 50%;
+}
+#seccion{
+  height: 95%;
+  width: 45%;
+  float: right;
+  border-radius: 0.5em;
+  background: yellow;
+}
+.circle10 {
+  position: absolute;
+  top: 10%;
+  right: 80%;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  border: 2px solid #FFFFFF;
+}
+
+.circle1 {
+  position: absolute;
+  top: 10%;
+  right: 90%;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  border: 2px solid #FFFFFF;
+}
+.info{
+   text-align: center;
+   position: relative;
+   /* position: absolute;
+   right: 45%; */
+  }
+  .basemodal{
+    position: relative;
+    left: 50%;
+    top: 2%;
+  }
+#myBtn{
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
   text-decoration: none;
-  color: red ;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
 }
-.menu__link:hover {
-  background: white;
-  color: inherit;
-  margin:2px;
-  padding: 5px;
-  width: 720px;
-  border: 5px solid black;
+#myBtn:hover {background-color: #3e8e41}
+
+#myBtn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.filterDiv {
+
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 90%;
+  height: 20%;
+  /* line-height: 100px; */
+  text-align: center;
+  margin: 2px;
+  display: none;
+  background:red;
+  margin: 2em;
+  border-radius: 1em;
+  position: relative;
+}
+.show {
+  display: block;
+}
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  position: absolute;
 
 }
-/* The Modal (background) */
-.modal {
+.btn.activeone{
+  position: relative;
+  float: right;
+  background-color: green;
+  color: white;
+  left: 3%;
+}
+
+.mostrar {
+  display: block;
+}
+                                  /* The Modal (background) */
+.modal-content {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -63,17 +267,20 @@
 }
 
 /* Modal Content */
-.modal-content {
+.modal-header {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 50%;
+    top: 30%;
+    right: 20%;
+    position: absolute;
 }
 
 /* The Close Button */
 .close {
-    color: #aaaaaa;
+    color: #000000;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -86,13 +293,204 @@
     cursor: pointer;
 }
 
-  .portada{
-  background-color: red;
-  color: black;
-  padding: 40px;
-  text-align: center;
+
+   .carpetaMobie {
+    float: left;
+    background-color: #2196F3;
+    color: #ffffff;
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;
+    display: none;
   }
 
-/* .menu__item{
+  .contienemp3 {
+    margin-top: 20px;
+    overflow: hidden;
+  }
 
-} */
+  /* Style the buttons */
+  .boton {
+    background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+  }
+
+  .boton:hover {
+    background-color: #555555;
+    color: white;
+  }
+
+  .boton1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+  .boton1:hover {
+      background-color: #4CAF50;
+      color: white;
+  }
+  .boton2 {
+      background-color: white;
+      color: black;
+      border: 2px solid #008CBA;
+  }
+
+  .boton2:hover {
+      background-color: #008CBA;
+      color: white;
+  }
+
+  .boton3 {
+      background-color: white;
+      color: black;
+      border: 2px solid #f44336;
+  }
+
+  .boton3:hover {
+      background-color: #f44336;
+      color: white;
+  }
+  .boton4 {
+      background-color: white;
+      color: black;
+      border: 2px solid #555555;
+  }
+
+  .boton4:hover {
+      background-color: #555555;
+      color: white;
+  }
+  .mostrar {
+    display: block;
+  }
+
+
+
+                                          /* primercontenedor */
+                                          .containerone{
+                                            padding: 100px;
+                                          }
+                                          .card {
+                                            width: 590px;
+                                            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                                            text-align: center;
+                                            position: relative;
+                                            left: 5%;
+                                          }
+                                          .registro{
+                                            width: 550px;
+                                          }
+                                          .one-modal {
+                                              display: none; /* Hidden by default */
+                                              position: fixed; /* Stay in place */
+                                              z-index: 1; /* Sit on top */
+                                              padding-top: 100px; /* Location of the box */
+                                              left: 0;
+                                              top: 0;
+                                              width: 100%; /* Full width */
+                                              height: 100%; /* Full height */
+                                              overflow: auto; /* Enable scroll if needed */
+                                              background-color:; /* Fallback color */
+                                              background-color: gren; /* Black w/ opacity */
+                                          }
+
+                                          /* Modal Content */
+                                          .one-header{
+                                              background-color: red;
+                                              margin: auto;
+                                              padding: 200px;
+                                              border: 1px solid #888;
+                                              width: 38%;
+                                              top: 20%;
+                                              right: 30%;
+                                          }
+
+                                          /* The Close Button */
+                                           .cerrar {
+                                              color: #000000;
+                                              float: right;
+                                              font-size: 28px;
+                                              font-weight: bold;
+                                          }
+
+                                          .cerrar:hover,
+                                          .cerrar:focus {
+                                              color: #000;
+                                              text-decoration: none;
+                                              cursor: pointer;
+                                          }
+
+
+                                          #buttonone{
+                                            display: inline-block;
+                                            padding: 15px 25px;
+                                            font-size: 24px;
+                                            cursor: pointer;
+                                            text-align: center;
+                                            text-decoration: none;
+                                            outline: none;
+                                            color: #fff;
+                                            background-color: #4CAF50;
+                                            border: none;
+                                            border-radius: 15px;
+                                            box-shadow: 0 9px #999;
+
+
+                                          }
+                                          #buttonone:hover {background-color: #3e8e41}
+
+                                          #buttonone:active {
+                                            background-color: #3e8e41;
+                                            box-shadow: 0 5px #666;
+                                            transform: translateY(4px);
+                                          }
+                                          .modalboton{
+                                            position: relative;
+                                            left: 75%;
+                                            bottom: 20%;
+                                          }
+.one-modal{
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
